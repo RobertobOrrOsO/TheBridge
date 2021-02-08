@@ -1,0 +1,128 @@
+body{
+    padding: 0;
+    margin:0 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+main, title, section{
+    padding:2%;
+    margin:0 0;
+}
+section{
+    display: flex;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    margin: 40px 10px;
+    background-color: transparent;
+}
+.logotipo{
+    width: 230px;
+}
+
+/* ------------NAVEGACIÓN---------------- */
+
+/* ul{
+    display: flex;
+    justify-content: flex-end;
+} */
+ul li{
+    display: inline-flex;
+    background-color: #303030;
+}
+a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 20px;
+}
+a:hover {
+    color: red;
+}
+.porfolio:hover ul{
+    display: block;
+    position: absolute;
+    opacity: 1;
+}
+ul li ul {
+    display: none;
+    position: relative;
+    margin-left: -40px;
+    margin-top: 30px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.container{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    margin-top: 100px;
+}
+.foto{
+    margin: auto;
+    width: 80%;
+    /* margin-top: -20px; */
+}
+.title{
+    font-size: 3.5em;
+	line-height: 1.2em;
+    margin-bottom: 10px;
+}
+.biografia{
+    color: rgba(17, 16, 16, 0.63);
+    text-align: left;
+	font-size: 1.0em;
+	line-height: 30px;
+}
+footer{
+    background-color: grey;
+}
+
+@media screen and (min-width: 576px) {
+    /* main{
+        flex-direction: column;}
+    } */
+    .notices{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    /* article{
+        width: 50%;
+    } */
+
+@media screen and (min-width: 768px){
+    div.information{
+        display: flex;
+        flex-direction: row;}
+    .foto{
+        width: 60%;
+        }
+    }
+    
+@media screen and (min-width: 1200px) {
+    .container{
+        width: 1199px;
+        display: flex;
+        /* flex-direction: column; */
+        align-content: center;}
+    body{
+        display: flex;
+        align-items: center;
+        }
+    .title, header, footer{
+        width: 100%;
+        }
+    header{
+        padding: 0px 20px;
+    }
+    .foto{
+        width: 50%;
+        }
+    }
