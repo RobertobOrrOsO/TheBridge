@@ -1,40 +1,81 @@
 body{
-    padding: 0;
+    padding: 1%;
     margin:0 0;
     box-sizing: border-box;
-    font-family: 'Montserrat Alternates', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     display: flex;
     flex-direction: column;
 }
-main, title, section{
-    padding:2%;
-    margin:0 0;
-}
-section{
-    display: flex;
-    flex-direction: column;
+.myVideo{
+	max-width: 100%;
+	text-align: center;
+    margin-top: 20px;
+	/* margin: auto; */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+	-webkit-box-align: center;
+		-ms-flex-align: center;
+			align-items: center;
 }
 header{
     display: flex;
     justify-content: space-between;
     position: fixed;
-    width: 100%;
-    margin: 40px 10px;
-    background-color: transparent;
+    width: 98%;
+    /* margin: 40px 0px; */
 }
 .logotipo{
-    width: 230px;
+    width: 300px;
+    margin: 0px;
+    margin-top: 22px;
+}
+.boton{
+    width: 60px;
+    align-items: flex-end;
+    margin-right: 70px;
+    /* transition: transform ; */
+}
+.boton:hover{
+    color:#67dd38;
+    transform: rotate(45deg);
+}
+
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar label {
+    text-align: right;
+}
+
+.menu {
+    display: none;
+}
+
+#menuboton:checked ~ .menu {
+    display: block;
+}
+
+#menuboton {
+    display: none;
 }
 
 /* ------------NAVEGACIÓN---------------- */
 
-/* ul{
-    display: flex;
-    justify-content: flex-end;
-} */
+ul{
+    /* margin-right: 80px; */
+    margin-top: 55px;
+}
 ul li{
     display: inline-flex;
-    background-color: #303030;
+    background-color: #000000;
+    margin-top: 5px;
 }
 a{
     text-decoration: none;
@@ -42,7 +83,7 @@ a{
     padding: 8px 20px;
 }
 a:hover {
-    color: red;
+    color: #67dd38;
 }
 .porfolio:hover ul{
     display: block;
@@ -58,71 +99,78 @@ ul li ul {
     transition: opacity 1s;
 }
 
-.container{
+main{
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
+    align-items: center;
+}
+.cabecera{
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+.container{
+    width: 95%;
+}
+section{
+    display: flex;
+    flex-direction: column;
+}
+/* .container{
+    display: flex;
     justify-content: center;
     margin-top: 100px;
-}
-.foto{
-    margin: auto;
-    width: 80%;
-    /* margin-top: -20px; */
+} */
+.pretitle{
+    color: #67dd38;
 }
 .title{
-    font-size: 3.5em;
-	line-height: 1.2em;
-    margin-bottom: 10px;
+    font-size: 3.0em;
+    line-height: 1.2em;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    letter-spacing: -0.08em;
 }
-.biografia{
-    color: rgba(17, 16, 16, 0.63);
+hr{
+    width: 100%;
+    border-top: 1px solid #67dd38;    
+}
+.text{
+    color: #040c00;
     text-align: left;
 	font-size: 1.0em;
 	line-height: 30px;
+    font-weight: 300;
 }
 footer{
     background-color: grey;
 }
 
-@media screen and (min-width: 576px) {
-    /* main{
-        flex-direction: column;}
-    } */
-    .notices{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    /* article{
-        width: 50%;
-    } */
-
 @media screen and (min-width: 768px){
-    div.information{
-        display: flex;
-        flex-direction: row;}
-    .foto{
-        width: 60%;
-        }
+.container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
     }
-    
-@media screen and (min-width: 1200px) {
+}
+
+@media screen and (min-width: 1200px){
     .container{
-        width: 1199px;
+        width: 70%;
         display: flex;
-        /* flex-direction: column; */
-        align-content: center;}
-    body{
-        display: flex;
-        align-items: center;
+        flex-direction: column;
+        align-content: center;
+        /* padding-right: 10%; */
         }
-    .title, header, footer{
-        width: 100%;
-        }
-    header{
-        padding: 0px 20px;
+    .pretitle{
+        font-size: 1.2em;
     }
-    .foto{
-        width: 50%;
-        }
+    .title{
+    font-size: 3.8em;
+    }
+    .text{
+    font-size: 1.1em;
+    line-height: 32px;
+    }
     }
