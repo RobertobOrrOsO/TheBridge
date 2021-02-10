@@ -107,6 +107,14 @@ main{
     align-items: center;
     margin-top: 108px;
 }
+@keyframes deslizamiento {
+    0%{
+        transform: translateY(70%)
+    }
+    100%{
+        transform: translateY(0%)
+    }
+}
 .cabecera{
     width: 100%;
     margin-bottom: 30px;
@@ -114,6 +122,7 @@ main{
     overflow: hidden;
     object-fit: cover;
     margin-bottom: 30px;
+    animation: deslizamiento 1.0s;
 }
 .container{
     width: 95%;
@@ -130,6 +139,7 @@ div.projects{
 }
 article{
     width: 100%;
+    animation: deslizamiento 1.0s;
 }
 img.projects{
     width: 100%;
@@ -144,6 +154,7 @@ h2, .label{
     font-size: 1.2em;
     color: #67dd38;
     font-weight: 900;
+    animation: deslizamiento 1.0s;
 }
 h1{
     font-size: 2.4em;
@@ -151,6 +162,7 @@ h1{
     margin-top: 15px;
     margin-bottom: 25px;
     letter-spacing: -0.08em;
+    animation: deslizamiento 1.0s;
 }
 .text{
     color: #040c00;
@@ -165,6 +177,7 @@ h1{
     padding: 10px;
     border: 1.5px solid #b6b8b5;
     border-radius: 5px;
+    animation: deslizamiento 1.0s;
 }
 .contact{
     width: 85%;
@@ -259,6 +272,7 @@ h6{
     }
     .contact{
         width: 700px;
+        animation: deslizamiento 1.0s;
     }
 }
 
