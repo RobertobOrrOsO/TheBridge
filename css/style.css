@@ -28,7 +28,6 @@ div.wellcome-video, div.wellcomeheader{
     -ms-flex-align: center;
     justify-content: center;
 }
-
 header{
     display: flex;
     justify-content: space-between;
@@ -39,18 +38,18 @@ header{
     width: 200px;
     margin: 0px;
     margin-top: 22px;
+    margin-left: 10px;
 }
 .boton{
     width: 40px;
     align-items: flex-end;
     margin-top: 43px;
+    margin-right: 10px;
 }
 .boton:hover{
     color:#67dd38;
     transform: rotate(45deg);
 }
-
-
 .navbar {
     display: flex;
     flex-direction: column;
@@ -71,9 +70,6 @@ header{
 #menuboton {
     display: none;
 }
-
-/* ------------NAVEGACIÓN---------------- */
-
 ul{
     margin-top: 34px;
 }
@@ -90,6 +86,7 @@ a{
 }
 a:hover {
     color: #67dd38;
+    font-weight: bold;
 }
 .porfolio:hover ul{
     display: block;
@@ -112,6 +109,10 @@ main{
 }
 .cabecera{
     width: 100%;
+    margin-bottom: 30px;
+    height: 200px;
+    overflow: hidden;
+    object-fit: cover;
     margin-bottom: 30px;
 }
 .container{
@@ -139,14 +140,15 @@ p.dates{
     margin-bottom: 35px;
 }
 
-.pretitle{
+h2, .label{
     font-size: 1.2em;
     color: #67dd38;
+    font-weight: 900;
 }
-.title{
-    font-size: 2.7em;
+h1{
+    font-size: 2.4em;
     line-height: 1.2em;
-    margin-top: 0px;
+    margin-top: 15px;
     margin-bottom: 25px;
     letter-spacing: -0.08em;
 }
@@ -159,10 +161,13 @@ p.dates{
 }
 .input{
     overflow: visible;
-    margin-top: 3px;
+    margin-top: 10px;
     padding: 10px;
     border: 1.5px solid #b6b8b5;
     border-radius: 5px;
+}
+.contact{
+    width: 85%;
 }
 .send {
     background-color: #67dd38;
@@ -182,11 +187,11 @@ footer{
     align-items: center;
     color: white
 }
-h5.name{
+h5{
     font-size: 1.1em;
     margin-bottom: 0px;
 }
-h6.contact{
+h6{
     font-size: 0.9em;
     text-align: center;
     margin-top: 15px;
@@ -208,8 +213,8 @@ h6.contact{
         main{
             margin-top: 150px;
         }
-        .title{
-            font-size: 3.0em;
+        h1{
+            font-size: 2.6em
         }
         .myVideo{
             width: 190%;
@@ -242,13 +247,18 @@ h6.contact{
     article.projects{
         width: 50%;
     }
-    .title{
-        font-size: 3.0em;
+    .cabecera{
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
     }
     .myVideo{
         width: 150%;
         margin-top: 50px;
         margin-left: -230px;
+    }
+    .contact{
+        width: 700px;
     }
 }
 
@@ -256,10 +266,10 @@ h6.contact{
     .logotipo{
         width: 320px;
     }
-    .pretitle{
+    h2, .label{
         font-size: 1.2em;
     }
-    .title{
+    .h1{
     font-size: 3.5em;
     }
     .text{
