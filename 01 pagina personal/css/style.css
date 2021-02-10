@@ -6,38 +6,44 @@ body{
     display: flex;
     flex-direction: column;
 }
-.myVideo{
-	max-width: 100%;
-	text-align: center;
-    margin-top: 20px;
-	/* margin: auto; */
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: center;
-		-ms-flex-pack: center;
-			justify-content: center;
-	-webkit-box-align: center;
-		-ms-flex-align: center;
-			align-items: center;
+div.wellcome{
+    position: relative;
 }
+div.wellcome-video, div.wellcomeheader{
+    position: absolute;
+    overflow: hidden;
+}
+.myVideo{
+    overflow: hidden;
+    width: 350%;
+    margin-left: -500px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    justify-content: center;
+}
+
 header{
     display: flex;
     justify-content: space-between;
     position: fixed;
     width: 98%;
-    /* margin: 40px 0px; */
 }
 .logotipo{
-    width: 300px;
+    width: 200px;
     margin: 0px;
     margin-top: 22px;
 }
 .boton{
-    width: 60px;
+    width: 40px;
     align-items: flex-end;
-    margin-right: 70px;
-    /* transition: transform ; */
+    margin-top: 43px;
 }
 .boton:hover{
     color:#67dd38;
@@ -69,18 +75,18 @@ header{
 /* ------------NAVEGACIÓN---------------- */
 
 ul{
-    /* margin-right: 80px; */
-    margin-top: 55px;
+    margin-top: 34px;
 }
 ul li{
     display: inline-flex;
     background-color: #000000;
-    margin-top: 5px;
+    padding: 0px 10px;
+    margin: 5px 0px
 }
 a{
     text-decoration: none;
     color: white;
-    padding: 8px 20px;
+    padding: 8px 0px;
 }
 a:hover {
     color: #67dd38;
@@ -98,15 +104,14 @@ ul li ul {
     opacity: 0;
     transition: opacity 1s;
 }
-
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 108px;
 }
 .cabecera{
     width: 100%;
-    margin-top: 150px;
     margin-bottom: 30px;
 }
 .container{
@@ -116,24 +121,34 @@ section{
     display: flex;
     flex-direction: column;
 }
-/* .container{
+div.projects{
     display: flex;
-    justify-content: center;
-    margin-top: 100px;
-} */
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+}
+article{
+    width: 100%;
+}
+img.projects{
+    width: 100%;
+}
+p.dates{
+    margin-top: -20px;
+    color: #67dd38;
+    margin-bottom: 35px;
+}
+
 .pretitle{
+    font-size: 1.2em;
     color: #67dd38;
 }
 .title{
-    font-size: 3.0em;
+    font-size: 2.7em;
     line-height: 1.2em;
     margin-top: 0px;
     margin-bottom: 25px;
     letter-spacing: -0.08em;
-}
-hr{
-    width: 100%;
-    border-top: 1px solid #67dd38;    
 }
 .text{
     color: #040c00;
@@ -142,35 +157,119 @@ hr{
 	line-height: 30px;
     font-weight: 300;
 }
-footer{
-    background-color: grey;
+.input{
+    overflow: visible;
+    margin-top: 3px;
+    padding: 10px;
+    border: 1.5px solid #b6b8b5;
+    border-radius: 5px;
 }
+.send {
+    background-color: #67dd38;
+    font-size: 1.2em;
+    font-weight: 500;
+    border: none;
+    color: white;
+    padding: 12px 32px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+footer{
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white
+}
+h5.name{
+    font-size: 1.1em;
+    margin-bottom: 0px;
+}
+h6.contact{
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 15px;
+    line-height: 22px;
+    font-weight: 300;
+}
+
+@media screen and (min-width: 560px){
+    .container{
+        width: 85%;
+        }
+        .logotipo{
+            width: 260px;
+        }
+        .boton{
+            width: 50px;
+            margin-top: 50px;
+        }
+        main{
+            margin-top: 150px;
+        }
+        .title{
+            font-size: 3.0em;
+        }
+        .myVideo{
+            width: 190%;
+            margin-top: 60px;
+            margin-left: -280px;
+        }
+    }
 
 @media screen and (min-width: 768px){
 .container{
-    width: 80%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-content: center;
     }
+    .logotipo{
+        width: 300px;
+    }
+    .boton{
+        width: 60px;
+        margin-top: 48px;
+    }
+    main{
+        margin-top: 150px;
+    }
+    section.projects{
+        display: flex;
+        flex-direction: column;
+    }
+    article.projects{
+        width: 50%;
+    }
+    .title{
+        font-size: 3.0em;
+    }
+    .myVideo{
+        width: 150%;
+        margin-top: 50px;
+        margin-left: -230px;
+    }
 }
 
 @media screen and (min-width: 1200px){
-    .container{
-        width: 70%;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        /* padding-right: 10%; */
-        }
+    .logotipo{
+        width: 320px;
+    }
     .pretitle{
         font-size: 1.2em;
     }
     .title{
-    font-size: 3.8em;
+    font-size: 3.5em;
     }
     .text{
     font-size: 1.1em;
     line-height: 32px;
     }
+    .myVideo{
+        width: 100%;
+        margin-top: 0px;
+        margin-left: 0px;
+        align-items: center;
     }
+}
